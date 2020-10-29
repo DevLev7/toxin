@@ -1,1 +1,167 @@
-h1{font-size:24px;line-height:30px;color:#1F2041;font-weight:700}h2{font-size:19px;line-height:23.75px;color:#1F2041;font-weight:700}h3{font-size:12px;line-height:14.63px;color:#1F2041;font-weight:700}body{font-size:14px;line-height:24px;color:rgba(31,32,65,0.75);font-weight:400}body .content .color-element .element-block__square{width:70px;height:70px}
+/* quicksand-regular - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/quicksand-v21-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/quicksand-v21-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-v21-latin-regular.woff2") format("woff2"), url("../fonts/quicksand-v21-latin-regular.woff") format("woff"), url("../fonts/quicksand-v21-latin-regular.ttf") format("truetype"), url("../fonts/quicksand-v21-latin-regular.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* quicksand-700 - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/quicksand-v21-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/quicksand-v21-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-v21-latin-700.woff2") format("woff2"), url("../fonts/quicksand-v21-latin-700.woff") format("woff"), url("../fonts/quicksand-v21-latin-700.ttf") format("truetype"), url("../fonts/quicksand-v21-latin-700.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v15-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/montserrat-v15-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v15-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v15-latin_cyrillic-regular.woff") format("woff"), url("../fonts/montserrat-v15-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/montserrat-v15-latin_cyrillic-regular.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v15-latin_cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-v15-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v15-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v15-latin_cyrillic-700.woff") format("woff"), url("../fonts/montserrat-v15-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/montserrat-v15-latin_cyrillic-700.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h1 {
+  font-family: Quicksand;
+  font-size: 24px;
+  line-height: 30px;
+  color: #1F2041;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Quicksand";
+  font-size: 19px;
+  line-height: 23.75px;
+  color: #1F2041;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 14.63px;
+  color: #1F2041;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+}
+
+.spase-between {
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+body svg {
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
+body .content {
+  margin: auto;
+  max-width: 76.3888888889%;
+  height: auto;
+  padding: 145px 0;
+}
+body .content .colors-block .color-element {
+  margin-bottom: 20px;
+}
+body .content .colors-block .color-element .element-block__square {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+body .content .colors-block .color-element .element-block__description {
+  margin: auto 0;
+}
+body .content .colors-block .color-element .element-block__description .element-block__subtitle {
+  font-family: "Quicksand";
+  font-size: 19px;
+  line-height: 23.75px;
+  color: #1F2041;
+  font-weight: 400;
+}
+body .content .fonts-block {
+  width: 36.6363636364%;
+}
+body .content .fonts-block .font-element {
+  margin-bottom: 50px;
+}
+body .content .fonts-block .font-element:nth-child(1), body .content .fonts-block .font-element:nth-child(2) {
+  padding-left: 8px;
+}
+body .content .fonts-block .font-element:nth-child(3) {
+  padding-left: 15px;
+}
+body .content .fonts-block .font-element .font-element__title {
+  color: rgba(31, 32, 65, 0.25);
+  line-height: 29px;
+  font-weight: 400;
+  margin-right: 30px;
+}
+body .content .fonts-block .font-element .font-element__subtitle {
+  margin: auto 0;
+}
+
+.dark100 {
+  background-color: #1F2041;
+}
+
+.dark75 {
+  background-color: rgba(31, 32, 65, 0.75);
+}
+
+.dark50 {
+  background-color: rgba(31, 32, 65, 0.5);
+}
+
+.dark25 {
+  background-color: rgba(31, 32, 65, 0.25);
+}
+
+.dark5 {
+  background-color: rgba(31, 32, 65, 0.05);
+}
+
+.purple {
+  background-color: #BC9CFF;
+}
+
+.green {
+  background-color: #6FCF97;
+}

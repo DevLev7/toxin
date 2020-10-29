@@ -1,12 +1,86 @@
 @import "../base/base.scss";
 
+
 body{
+    margin: 0;
+    width: 100%;
+    svg{
+        position: relative;
+        left: 30px;
+        top: 30px;
+    }
     .content{
-        .color-element{
-            .element-block__square{
-                width: 70px;
-                height: 70px;
+        margin: auto;
+        max-width: 1100 / 1440 * 100%;
+        height: auto;
+        padding: 145px 0;
+        .colors-block{
+            .color-element{
+                margin-bottom: 20px;
+                .element-block__square{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 6px;
+                    margin-right: 40px;
+                }
+                .element-block__description{
+                    margin: auto 0;
+                    .element-block__subtitle{
+                        @include font('Quicksand',19px,23.75px ,$dark100,400 )
+                    }
+                }    
+                }
+        }
+        .fonts-block{
+            width: 403 / 1100 * 100%;
+            .font-element{
+                margin-bottom: 50px;
+                &:nth-child(1),&:nth-child(2){
+                    padding-left: 8px;
+                }    
+                &:nth-child(3){
+                    padding-left: 15px;
+                }    
+                .font-element__title{
+                    color:$dark25;
+                    line-height: 29px;
+                    font-weight: 400;
+                    margin-right: 30px;
+                }
+                .font-element__subtitle{
+                    margin: auto 0;
+                }
             }
-            }
-            }
+            }    
+    }
+}
+
+
+
+.dark100{
+    background-color: $dark100;
+}
+
+.dark75{
+    background-color: $dark75;
+}
+
+.dark50{
+    background-color: $dark50;
+}
+
+.dark25{
+    background-color: $dark25;
+}
+
+.dark5{
+    background-color: $dark5;
+}
+
+.purple{
+    background-color: $purple;
+}
+
+.green{
+    background-color: $green;
 }

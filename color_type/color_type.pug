@@ -8,13 +8,26 @@ html(lang="ru")
         link(rel="stylesheet", href="color_type.css")
         title Document
     body
-        .content.flex
+        include ../imag/logo.svg
+        .content.flex.spase-between
             .colors-block
-                +color-element('$dark100','Dark Shade 100%','#1F2041')
-                +color-element('$dark100','Dark Shade 100%','#1F2041')
-                +color-element('$dark100','Dark Shade 100%','#1F2041')
-                +color-element('$dark100','Dark Shade 100%','#1F2041')
-                +color-element('$dark100','Dark Shade 100%','#1F2041')
-                +color-element('$dark100','Dark Shade 100%','#1F2041')
-                +color-element('$dark100','Dark Shade 100%','#1F2041')
+                +color-element('dark100','Dark Shade 100%','#1F2041')
+                +color-element('dark75','Dark Shade 75%','#1F2041')
+                +color-element('dark50','Dark Shade 50%','#1F2041')
+                +color-element('dark25','Dark Shade 25%','#1F2041')
+                +color-element('dark5','Dark Shade 5%','#1F2041')
+                +color-element('purple','Purple','#1F2041')
+                +color-element('green','Green','#1F2041')
             .fonts-block
+                .font-element.flex
+                    h1.font-element__title H1
+                    h1.font-element__subtitle This one is the sub-section or widget title
+                .font-element.flex
+                    h2.font-element__title H2
+                    h2.font-element__subtitle Next one is the item title inside widgets
+                .font-element.flex
+                    h3.font-element__title H3
+                    h3.font-element__subtitle This is a label or CTA text
+                .font-element.flex
+                    h4.font-element__title Body
+                    p.font-element__subtitle This is the body text which is used for most of the design, like paragraphs, lists, etc.
