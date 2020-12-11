@@ -1,0 +1,306 @@
+include mixin.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="form_element.css")
+        link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        title Form element
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="../form_element/script/jquery.maskedinput.js")
+        script(src="../form_element/script/jquery.maskedinput.min.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    body
+        include ../imag/logo.svg
+        .content
+            .content-block1.flex
+                .element-block1
+                    form.text-field
+                        .text-field__title.flex.space-between
+                            h3 Text Field
+                            p Default
+                        input(type="email", name="email", placeholder="Email")
+                    form.text-field.hover
+                        .text-field__title.flex.space-between
+                            h3 Text Field
+                            p Hover / Focus
+                        input(type="email", name="email", placeholder="This is pretty awesome") 
+                    form
+                        .dropdown__title
+                            h3 Dropdown
+                        .dropdown
+                            input(type="text", name=""  placeholder="2 спальни, 2 кровати...") 
+                            a().btn-click
+                                img(src="../imag/more.svg", alt="")
+                    form.text-field.masked.mb
+                        .text-field__title
+                            h3 masked text field
+                        input(type="text", id="date", placeholder="ДД.ММ.ГГГГ")
+                    .flex.space-between
+                        form.mb
+                            +DateDropdown('date Dropdown','datepicker')
+                        form.mb
+                            +DateDropdown('date Dropdown','datepicker1')
+                    form.mb 
+                        h3 filter date dropdown
+                        .date-dropdown__filter
+                            input(type="text", id="d" placeholder="19 авг - 23 авг")
+                    form.mb  
+                        h3 subscription text field
+                        .text-field__subscription
+                            input(type="text" placeholder="Email")
+                            a(href="#")
+                                img(src="../imag/arrow.svg", alt="")
+                    //- form.block__dropdown
+                    //-     .text-field__title.flex.space-between
+                    //-         h3 dropdown
+                    //-         p Default
+                .element-block2
+                    form.mb
+                        .checkbox__buttons
+                            h3 Checkbox Buttons
+                            .check
+                                input(type="checkbox", id="cb1")
+                                label(for="cb1") Можно курить
+                            .check
+                                input(type="checkbox", id="cb2" checked="checked")
+                                label(for="cb2") Можно с питомцами
+                            .check
+                                input(type="checkbox", id="cb3" checked="checked")
+                                label(for="cb3") Можно пригласить гостей (до 10 человек)  
+                    form.mb
+                        .radio__buttons
+                            h3 Radio Buttons
+                            +Radio('rb1','rb2','Мужчины','Женщины')
+                    form.mb
+                        .block__toggle
+                            h3 Toggle
+                            +Toggle('button-1','button-1','Получать спецпредложения')
+                            .toggle
+                                .flex
+                                    .toggle-button-cover2
+                                        .button-cover2
+                                            .button.r(id="button-2")
+                                                input(type="checkbox", class="checkbox" name="")
+                                                .knobs2
+                                                .layer2
+                                    label(for="button-2") Получать спецпредложения 
+                    form.mb
+                        h3 Like button
+                            .flex
+                                .like-button
+                                    button(type="submit" ).btn-like.flex
+                                        svg
+                                        p 2
+                                .like-button
+                                    button(type="submit" ).btn-like.flex
+                                        svg
+                                        p 7
+                    form.mb
+                        h3 rate button
+                        .flex.space-between
+                            .fieldset
+                                span.star-cb-group
+                                    input(type="radio", name="rating" id="rating-5" value="5")
+                                    label(for="rating-5")  
+                                    input(type="radio", name="rating" id="rating-4" value="4" checked="checked")
+                                    label(for="rating-4") 
+                                    input(type="radio", name="rating" id="rating-3" value="3")
+                                    label(for="rating-3")
+                                    input(type="radio", name="rating" id="rating-2" value="2" )
+                                    label(for="rating-2")
+                                    input(type="radio", name="rating" id="rating-1" value="1")
+                                    label(for="rating-1")
+                            .fieldset
+                                span.star-cb-group1
+                                    input(type="radio", name="rating1" id="rating-10" value="5")
+                                    label(for="rating-10")  
+                                    input(type="radio", name="rating1" id="rating-9" value="4" checked="checked")
+                                    label(for="rating-9") 
+                                    input(type="radio", name="rating1" id="rating-8" value="3")
+                                    label(for="rating-8")
+                                    input(type="radio", name="rating1" id="rating-7" value="2" )
+                                    label(for="rating-7")
+                                    input(type="radio", name="rating1" id="rating-6" value="1")
+                                    label(for="rating-6")        
+                .element-block3
+                    form
+                        .flex
+                            h3 range slider
+                            .value-finish.flex
+                                .value.o0 
+                                p ₽ -
+                                .value.o1
+                                p ₽
+                        .range-slider
+                            .slider
+                                .track
+                            .thumb.t0
+                            .thumb.t1
+                    form
+                        h3 Buttons
+                        .buttons-block
+                            .buttons.flex
+                               button(type="submit").btn.btn-fill CLICK ME
+                               button(type="submit").btn.bth-hov.btn-fill CLICK ME
+                            .buttons.flex
+                                button(type="submit").btn.btn-empty CLICK ME
+                                button(type="submit").btn.bth-hov.btn-empty CLICK ME
+                            .links-block.flex
+                                a(href="#").link CLICK ME
+                                a(href="#").link.link-hov CLICK ME
+                            +Payment('Перейти к оплате')
+                    form 
+                        h3 pagination
+                        .pagination
+                            a(href="#" ).pager.active 1
+                            a(href="#").pager 2
+                            a(href="#").pager 3
+                            a(href="#").pager ...
+                            a(href="#").pager 15
+                            button(type="submit").btn-pager
+                                img(src="../imag/arrow_forward.svg", alt="")
+                        p 1 – 12 из 100+ вариантов аренды
+            .content-block2.flex
+                .element-block1
+                    form
+                        .dropdown__title.flex.space-between
+                            h3 Dropdown
+                            p Default
+                        .dropdown
+                            input(type="text", name=""  placeholder="2 спальни, 2 кровати...") 
+                            a()
+                                img(src="../imag/more.svg", alt="")
+                    form.mb
+                        .dropdown__title.flex.space-between
+                            h3 Dropdown
+                            p Expanded
+                        .dropdown
+                            input(type="text", name=""  placeholder="2 спальни, 2 кровати...") 
+                            a().btn-click
+                                img(src="../imag/more.svg", alt="")
+                            .select#select
+                                .select-block.flex.space-between
+                                    .select-block__text
+                                        h3 СПАЛЬНИ
+                                    .select-block__buttons
+                                        button(type="button" name="1" ).btn-reduce#btn-reduce -
+                                        span.result#clicks(name="1") 0
+                                        button(type="button" name="1" ).btn-large#btn-large +
+                                .select-block.flex.space-between
+                                    .select-block__text
+                                        h3 КРОВАТИ
+                                    .select-block__buttons
+                                        button(type="button" name="2").btn-reduce#btn-reduce2 -
+                                        span.result#clicks2(name="2") 0
+                                        button(type="button" name="2").btn-large#btn-large2 +
+                                .select-block.flex.space-between
+                                    .select-block__text
+                                        h3 Ванные комнаты
+                                    .select-block__buttons
+                                        button(type="button").btn-reduce#btn-reduce3 -
+                                        span.result#clicks3 0
+                                        button(type="button").btn-large#btn-large3 +
+                    form 
+                        .checkbox-list.flex
+                            h3 expandable checkbox list
+                            a()
+                                img(src="../imag/more.svg", alt="")
+                    form
+                        .checkbox-list
+                            .checkbox-list__toggle.flex
+                                h3 expandable checkbox list
+                                a().open_list
+                                    img(src="../imag/more.svg", alt="" id="foo")
+                            .checkbox-elements#checkbox-elements
+                                .check
+                                    input(type="checkbox", id="c1" name="1")
+                                    label(for="c1") Завтрак
+                                .check
+                                    input(type="checkbox", id="c2" checked="checked" )
+                                    label(for="c2") Письменный стол
+                                .check
+                                    input(type="checkbox", id="c3" checked="checked")
+                                    label(for="c3") Стул для кормления
+                                .check
+                                    input(type="checkbox", id="c4" checked="checked" )
+                                    label(for="c4") Кроватка
+                                .check
+                                    input(type="checkbox", id="c5" )
+                                    label(for="c5") Телевизор
+                                .check
+                                    input(type="checkbox", id="c6" )
+                                    label(for="c6") Шампунь
+                .element-block2
+                    form
+                        +Dropdown('Dropdown','val','Сколько гостей','btn-click0','select','Взрослые','btn-large','btn-reduce','Дети ','btn-large','btn-reduce','Младенцы ','btn-large','btn-reduce','clicks','clicks','clicks','','Применить')
+                    form.mr
+                        h3 rich Checkbox Buttons
+                        .rich_checkbox
+                            .check
+                                input(type="checkbox", id="ck1" name="1")
+                                label(for="ck1")  
+                                    span Широкий коридор
+                                    p Ширина коридоров в номере не менее 91 см
+                            .check
+                                input(type="checkbox", id="ck2" name="1")
+                                label(for="ck2")  
+                                    span Помощник для инвалидов
+                                    p На 1 этаже вас встретит специалист  и проводит до номера.
+                .element-block3
+                    form
+                       +Dropdown('Dropdown','val','Сколько гостей','btn-click2','select2','Взрослые','btn-large4','btn-reduce4','Дети ','btn-large5','btn-reduce5','Младенцы ','btn-large6','btn-reduce6','clicks4','clicks5','clicks6','Отменить','Применить')
+                    form.mr 
+                        h3 bullet list
+                        .bullet-list
+                            ul
+                                li Нельзя с питомцами
+                                li Без вечеринок и мероприятий
+                                li Время прибытия — после 13:00,<br> а выезд до 12:00
+            .content-block3.flex
+                form 
+                    .options
+                        .option-block.flex
+                            .option-block__img
+                                img(src="../imag/options_smile.svg", alt="" )
+                            .option-block__text
+                                .option-block__title Комфорт
+                                .option-block__subtitle Шумопоглощающие стены
+                        .option-block.flex
+                            .option-block__img
+                                img(src="../imag/option_city.svg", alt="" )
+                            .option-block__text
+                                .option-block__title Удобство
+                                .option-block__subtitle Окно в каждой из спален
+                form.mrr
+                    .comment-block
+                        .author-block.flex
+                            .author-block__photo
+                                img(src="../imag/comment_avatar.svg", alt="")
+                            .author-block__name
+                                .author-block__name__full-name Мурат Сарафанов
+                                .author-block__date 5 дней назад
+                        .comment-block__comment.flex
+                            .like-button
+                                    button(type="submit" ).btn-like.flex
+                                        svg
+                                        p 2
+                            .comment-block__text
+                                p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                                
+                        
+                    
+                                
+                                
+                        
+                                    
+                        
+                        
+            
+        script(src="../form_element/script/mask.js")
+        script(src="../form_element/script/datepicker.js")
+        script(src="../form_element/script/slider.js")
+        script(src="../form_element/script/dropdown.js")
+            

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="form_element.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <title>Form element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="../form_element/script/jquery.maskedinput.js"></script>
+    <script src="../form_element/script/jquery.maskedinput.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+</svg>
+
+    <div class="content">
+      <div class="content-block1 flex">
+        <div class="element-block1">
+          <form class="text-field">
+            <div class="text-field__title flex space-between">
+              <h3>Text Field</h3>
+              <p>Default</p>
+            </div>
+            <input type="email" name="email" placeholder="Email"/>
+          </form>
+          <form class="text-field hover">
+            <div class="text-field__title flex space-between">
+              <h3>Text Field</h3>
+              <p>Hover / Focus</p>
+            </div>
+            <input type="email" name="email" placeholder="This is pretty awesome"/>
+          </form>
+          <form>
+            <div class="dropdown__title">
+              <h3>Dropdown</h3>
+            </div>
+            <div class="dropdown">
+              <input type="text" name="" placeholder="2 спальни, 2 кровати..."/><a class="btn-click"><img src="../imag/more.svg" alt=""/></a>
+            </div>
+          </form>
+          <form class="text-field masked mb">
+            <div class="text-field__title">
+              <h3>masked text field</h3>
+            </div>
+            <input type="text" id="date" placeholder="ДД.ММ.ГГГГ"/>
+          </form>
+          <div class="flex space-between">
+            <form class="mb">
+              <div class="datedropdown-block">
+                <h3>date Dropdown</h3>
+                <div class="date-dropdown">
+                  <input type="text" id="datepicker" placeholder="ДД.ММ.ГГГГ"/>
+                </div>
+              </div>
+            </form>
+            <form class="mb">
+              <div class="datedropdown-block">
+                <h3>date Dropdown</h3>
+                <div class="date-dropdown">
+                  <input type="text" id="datepicker1" placeholder="ДД.ММ.ГГГГ"/>
+                </div>
+              </div>
+            </form>
+          </div>
+          <form class="mb"> 
+            <h3>filter date dropdown</h3>
+            <div class="date-dropdown__filter">
+              <input type="text" id="d" placeholder="19 авг - 23 авг"/>
+            </div>
+          </form>
+          <form class="mb"> 
+            <h3>subscription text field</h3>
+            <div class="text-field__subscription">
+              <input type="text" placeholder="Email"/><a href="#"><img src="../imag/arrow.svg" alt=""/></a>
+            </div>
+          </form>
+        </div>
+        <div class="element-block2">
+          <form class="mb">
+            <div class="checkbox__buttons">
+              <h3>Checkbox Buttons</h3>
+              <div class="check">
+                <input type="checkbox" id="cb1"/>
+                <label for="cb1">Можно курить</label>
+              </div>
+              <div class="check">
+                <input type="checkbox" id="cb2" checked="checked"/>
+                <label for="cb2">Можно с питомцами</label>
+              </div>
+              <div class="check">
+                <input type="checkbox" id="cb3" checked="checked"/>
+                <label for="cb3">Можно пригласить гостей (до 10 человек)  </label>
+              </div>
+            </div>
+          </form>
+          <form class="mb">
+            <div class="radio__buttons">
+              <h3>Radio Buttons</h3>
+              <div class="radio-block flex">
+                <div class="radio">
+                  <input type="radio" id="rb1" name="rb" checked="checked"/>
+                  <label for="rd1">Мужчины</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" id="rb2" name="rb"/>
+                  <label for="rd2">Женщины</label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form class="mb">
+            <div class="block__toggle">
+              <h3>Toggle</h3>
+              <div class="toggle">
+                <div class="flex">
+                  <div class="toggle-button-cover">
+                    <div class="button-cover">
+                      <div class="button r" id="button-1">
+                        <input class="checkbox" type="checkbox" name=""/>
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="button-1">Получать спецпредложения</label>
+                </div>
+              </div>
+              <div class="toggle">
+                <div class="flex">
+                  <div class="toggle-button-cover2">
+                    <div class="button-cover2">
+                      <div class="button r" id="button-2">
+                        <input class="checkbox" type="checkbox" name=""/>
+                        <div class="knobs2"></div>
+                        <div class="layer2"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="button-2">Получать спецпредложения </label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form class="mb">
+            <h3>Like button
+              <div class="flex">
+                <div class="like-button">
+                  <button class="btn-like flex" type="submit">
+                    <svg></svg>
+                    <p>2</p>
+                  </button>
+                </div>
+                <div class="like-button">
+                  <button class="btn-like flex" type="submit">
+                    <svg></svg>
+                    <p>7</p>
+                  </button>
+                </div>
+              </div>
+            </h3>
+          </form>
+          <form class="mb">
+            <h3>rate button</h3>
+            <div class="flex space-between">
+              <div class="fieldset"><span class="star-cb-group">
+                  <input type="radio" name="rating" id="rating-5" value="5"/>
+                  <label for="rating-5"> </label>
+                  <input type="radio" name="rating" id="rating-4" value="4" checked="checked"/>
+                  <label for="rating-4"> </label>
+                  <input type="radio" name="rating" id="rating-3" value="3"/>
+                  <label for="rating-3"></label>
+                  <input type="radio" name="rating" id="rating-2" value="2"/>
+                  <label for="rating-2"></label>
+                  <input type="radio" name="rating" id="rating-1" value="1"/>
+                  <label for="rating-1"></label></span></div>
+              <div class="fieldset"><span class="star-cb-group1">
+                  <input type="radio" name="rating1" id="rating-10" value="5"/>
+                  <label for="rating-10"> </label>
+                  <input type="radio" name="rating1" id="rating-9" value="4" checked="checked"/>
+                  <label for="rating-9"> </label>
+                  <input type="radio" name="rating1" id="rating-8" value="3"/>
+                  <label for="rating-8"></label>
+                  <input type="radio" name="rating1" id="rating-7" value="2"/>
+                  <label for="rating-7"></label>
+                  <input type="radio" name="rating1" id="rating-6" value="1"/>
+                  <label for="rating-6">       </label></span></div>
+            </div>
+          </form>
+        </div>
+        <div class="element-block3">
+          <form>
+            <div class="flex">
+              <h3>range slider</h3>
+              <div class="value-finish flex">
+                <div class="value o0"> </div>
+                <p>₽ -</p>
+                <div class="value o1"></div>
+                <p>₽</p>
+              </div>
+            </div>
+            <div class="range-slider">
+              <div class="slider">
+                <div class="track"></div>
+              </div>
+              <div class="thumb t0"></div>
+              <div class="thumb t1"></div>
+            </div>
+          </form>
+          <form>
+            <h3>Buttons</h3>
+            <div class="buttons-block">
+              <div class="buttons flex">
+                <button class="btn btn-fill" type="submit">CLICK ME</button>
+                <button class="btn bth-hov btn-fill" type="submit">CLICK ME</button>
+              </div>
+              <div class="buttons flex">
+                <button class="btn btn-empty" type="submit">CLICK ME</button>
+                <button class="btn bth-hov btn-empty" type="submit">CLICK ME</button>
+              </div>
+              <div class="links-block flex"><a class="link" href="#">CLICK ME</a><a class="link link-hov" href="#">CLICK ME</a></div>
+              <button class="btn-pay" type="submit">Перейти к оплате<img class="arrow" src="../imag/arrow_forward.svg" alt=""/></button>
+            </div>
+          </form>
+          <form> 
+            <h3>pagination</h3>
+            <div class="pagination"><a class="pager active" href="#">1</a><a class="pager" href="#">2</a><a class="pager" href="#">3</a><a class="pager" href="#">...</a><a class="pager" href="#">15</a>
+              <button class="btn-pager" type="submit"><img src="../imag/arrow_forward.svg" alt=""/></button>
+            </div>
+            <p>1 – 12 из 100+ вариантов аренды</p>
+          </form>
+        </div>
+      </div>
+      <div class="content-block2 flex">
+        <div class="element-block1">
+          <form>
+            <div class="dropdown__title flex space-between">
+              <h3>Dropdown</h3>
+              <p>Default</p>
+            </div>
+            <div class="dropdown">
+              <input type="text" name="" placeholder="2 спальни, 2 кровати..."/><a><img src="../imag/more.svg" alt=""/></a>
+            </div>
+          </form>
+          <form class="mb">
+            <div class="dropdown__title flex space-between">
+              <h3>Dropdown</h3>
+              <p>Expanded</p>
+            </div>
+            <div class="dropdown">
+              <input type="text" name="" placeholder="2 спальни, 2 кровати..."/><a class="btn-click"><img src="../imag/more.svg" alt=""/></a>
+              <div class="select" id="select">
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>СПАЛЬНИ</h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" name="1" id="btn-reduce">-</button><span class="result" id="clicks" name="1">0</span>
+                    <button class="btn-large" type="button" name="1" id="btn-large">+</button>
+                  </div>
+                </div>
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>КРОВАТИ</h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" name="2" id="btn-reduce2">-</button><span class="result" id="clicks2" name="2">0</span>
+                    <button class="btn-large" type="button" name="2" id="btn-large2">+</button>
+                  </div>
+                </div>
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>Ванные комнаты</h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" id="btn-reduce3">-</button><span class="result" id="clicks3">0</span>
+                    <button class="btn-large" type="button" id="btn-large3">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form> 
+            <div class="checkbox-list flex">
+              <h3>expandable checkbox list</h3><a><img src="../imag/more.svg" alt=""/></a>
+            </div>
+          </form>
+          <form>
+            <div class="checkbox-list">
+              <div class="checkbox-list__toggle flex">
+                <h3>expandable checkbox list</h3><a class="open_list"><img src="../imag/more.svg" alt="" id="foo"/></a>
+              </div>
+              <div class="checkbox-elements" id="checkbox-elements">
+                <div class="check">
+                  <input type="checkbox" id="c1" name="1"/>
+                  <label for="c1">Завтрак</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="c2" checked="checked"/>
+                  <label for="c2">Письменный стол</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="c3" checked="checked"/>
+                  <label for="c3">Стул для кормления</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="c4" checked="checked"/>
+                  <label for="c4">Кроватка</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="c5"/>
+                  <label for="c5">Телевизор</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="c6"/>
+                  <label for="c6">Шампунь</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="element-block2">
+          <form>
+            <div class="dropdown__title">
+              <h3>Dropdown</h3>
+            </div>
+            <div class="dropdown">
+              <input class="dropdown__input" type="text" id="calculation" readonly="readonly"/>
+              <p class="val" id="val">Сколько гостей</p><a class="btn-click0"><img src="../imag/more.svg" alt=""/></a>
+              <div class="select" id="select">
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>Взрослые</h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" id="btn-reduce">-</button><span class="result" id="clicks">0</span>
+                    <button class="btn-large" type="button" id="btn-large">+</button>
+                  </div>
+                </div>
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>Дети </h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" id="btn-reduce">-</button><span class="result" id="clicks">0</span>
+                    <button class="btn-large" type="button" id="btn-large">+</button>
+                  </div>
+                </div>
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>Младенцы </h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" id="btn-reduce">-</button><span class="result" id="clicks">0</span>
+                    <button class="btn-large" type="button" id="btn-large">+</button>
+                  </div>
+                </div>
+                <div class="select-button flex space-between">
+                  <button type="button"></button>
+                  <button type="button">Применить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form class="mr">
+            <h3>rich Checkbox Buttons</h3>
+            <div class="rich_checkbox">
+              <div class="check">
+                <input type="checkbox" id="ck1" name="1"/>
+                <label for="ck1"> <span>Широкий коридор</span>
+                  <p>Ширина коридоров в номере не менее 91 см</p>
+                </label>
+              </div>
+              <div class="check">
+                <input type="checkbox" id="ck2" name="1"/>
+                <label for="ck2"> <span>Помощник для инвалидов</span>
+                  <p>На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="element-block3">
+          <form>
+            <div class="dropdown__title">
+              <h3>Dropdown</h3>
+            </div>
+            <div class="dropdown">
+              <input class="dropdown__input" type="text" id="calculation" readonly="readonly"/>
+              <p class="val" id="val">Сколько гостей</p><a class="btn-click2"><img src="../imag/more.svg" alt=""/></a>
+              <div class="select" id="select2">
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>Взрослые</h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" id="btn-reduce4">-</button><span class="result" id="clicks4">0</span>
+                    <button class="btn-large" type="button" id="btn-large4">+</button>
+                  </div>
+                </div>
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>Дети </h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" id="btn-reduce5">-</button><span class="result" id="clicks5">0</span>
+                    <button class="btn-large" type="button" id="btn-large5">+</button>
+                  </div>
+                </div>
+                <div class="select-block flex space-between">
+                  <div class="select-block__text">
+                    <h3>Младенцы </h3>
+                  </div>
+                  <div class="select-block__buttons">
+                    <button class="btn-reduce" type="button" id="btn-reduce6">-</button><span class="result" id="clicks6">0</span>
+                    <button class="btn-large" type="button" id="btn-large6">+</button>
+                  </div>
+                </div>
+                <div class="select-button flex space-between">
+                  <button type="button">Отменить</button>
+                  <button type="button">Применить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form class="mr"> 
+            <h3>bullet list</h3>
+            <div class="bullet-list">
+              <ul>
+                <li>Нельзя с питомцами</li>
+                <li>Без вечеринок и мероприятий</li>
+                <li>Время прибытия — после 13:00,<br> а выезд до 12:00</li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="content-block3 flex">
+        <form> 
+          <div class="options">
+            <div class="option-block flex">
+              <div class="option-block__img"><img src="../imag/options_smile.svg" alt=""/></div>
+              <div class="option-block__text">
+                <div class="option-block__title">Комфорт</div>
+                <div class="option-block__subtitle">Шумопоглощающие стены</div>
+              </div>
+            </div>
+            <div class="option-block flex">
+              <div class="option-block__img"><img src="../imag/option_city.svg" alt=""/></div>
+              <div class="option-block__text">
+                <div class="option-block__title">Удобство</div>
+                <div class="option-block__subtitle">Окно в каждой из спален</div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form class="mrr">
+          <div class="comment-block">
+            <div class="author-block flex">
+              <div class="author-block__photo"><img src="../imag/comment_avatar.svg" alt=""/></div>
+              <div class="author-block__name">
+                <div class="author-block__name__full-name">Мурат Сарафанов</div>
+                <div class="author-block__date">5 дней назад</div>
+              </div>
+            </div>
+            <div class="comment-block__comment flex">
+              <div class="like-button">
+                <button class="btn-like flex" type="submit">
+                  <svg></svg>
+                  <p>2</p>
+                </button>
+              </div>
+              <div class="comment-block__text">
+                <p>Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../form_element/script/mask.js"></script>
+    <script src="../form_element/script/datepicker.js"></script>
+    <script src="../form_element/script/slider.js"></script>
+    <script src="../form_element/script/dropdown.js"></script>
+  </body>
+</html>
