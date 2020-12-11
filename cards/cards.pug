@@ -1,0 +1,231 @@
+include ../form_element/mixin.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="cards.css")
+        link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        title Form element
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="../form_element/script/jquery.maskedinput.js")
+        script(src="../form_element/script/jquery.maskedinput.min.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    body
+        include ../imag/logo.svg
+        .content
+            .flex
+                .column
+                    .findroom-block
+                        h1 Найдём номера под ваши пожелания
+                        .findroom-block__date.flex.space-between
+                            +DateDropdown('прибытие', 'datepicker')
+                            +DateDropdown('выезд', 'datepicker1')
+                        .findroom-block__gest    
+                            +Dropdown('Гости','val','Сколько гостей','btn-click','select','Взрослые','btn-large4','btn-reduce4','Дети ','btn-large5','btn-reduce5','Младенцы ','btn-large6','btn-reduce6','clicks4','clicks5','clicks6','Отменить','Применить','btn-cansel2','btn-apply2')
+                        +Payment('Подобрать номер')
+                    .check-block
+                        h1 Регистрация аккаунта
+                        input(type="text", placeholder="Имя")
+                        input(type="text", placeholder="Фамилия")
+                        +Radio('rb1','rb2','Мужчины','Женщины')
+                        h3 Дата рождения
+                        input(type="text", id="date", placeholder="ДД.ММ.ГГГГ")
+                        h3 Данные для входа в сервис
+                        input(type="email",   placeholder="Email")
+                        input(type="password",   placeholder="Пароль")
+                        .toggle-block
+                            +Toggle('button-1','button-1','Получать спецпредложения')
+                        +Payment('Перейти к оплате')
+                        .account-block.flex.space-between
+                            p Уже есть аккаунт на Toxin
+                            button(type="submit").btn.bth-hov.btn-empty Войти
+                .column
+                    .selectroom-block
+                        .selectroom-block__title.flex.space-between
+                            h1 № 888 
+                                span люкс
+                            p#room_rate 
+                                span в сутки
+                        .selectroom-block__date.flex.space-between
+                            +DateDropdown('прибытие', 'datepicker2')
+                            +DateDropdown('выезд', 'datepicker3')
+                        .selectroom-block__gest    
+                            +Dropdown('Гости','val1','Сколько гостей','btn-click2','select2','Взрослые','btn-large1','btn-reduce1','Дети ','btn-large2','btn-reduce2','Младенцы ','btn-large3','btn-reduce3','clicks1','clicks2','clicks3','Отменить','Применить','btn-cansel','btn-apply')
+                        .selectroom-block__cost.flex.space-between
+                            p#total_days
+                            p#cost_days
+                        .selectroom-block__service-charge.flex.space-between
+                            .service-charge_title.flex
+                                p.title Сбор за услуги: скидка 2 179₽
+                                img(src="../imag/info.svg", alt="")
+                            p 0₽
+                        .selectroom-block__additional.flex.space-between
+                            .additional_title.flex
+                                p.title Сбор за дополнительные  услуги
+                                img(src="../imag/info.svg", alt="")
+                            p#add 
+                        .selectroom-block__total-price.flex.space-between
+                            h1 Итого
+                            h1#total
+                        +Payment('Забронировать')
+                    .login-block
+                        h1 Войти
+                        input(type="email",   placeholder="Email")
+                        input(type="password",   placeholder="Пароль")
+                        +Payment('Войти')
+                        .account-block.flex.space-between
+                            p Нет аккаунта на Toxin?
+                            button(type="submit").btn.bth-hov.btn-empty Создать
+                .column
+                    #ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all
+                    .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all
+                    a.ui-datepicker-prev.ui-corner-all
+                        data-handler="prev" data-event="click" title="Предыдущий"
+                        span.ui-icon.ui-icon-circle-triangle-w Предыдущий
+        
+                    a.ui-datepicker-next.ui-corner-all
+                        data-handler="next" data-event="click" title="Следующий">
+                        span.ui-icon.ui-icon-circle-triangle-e Следующий
+        <div class="ui-datepicker-title">
+        <span class="ui-datepicker-month">Декабрь</span>&nbsp;
+        <span class="ui-datepicker-year">2020</span></div></div>
+        <table class="ui-datepicker-calendar">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <span title="понедельник">Пн</span>
+                    </th>
+                    <th scope="col">
+                        <span title="вторник">Вт</span>
+                    </th>
+                    <th scope="col">
+                        <span title="среда">Ср</span>
+                    </th> 
+                    <th scope="col">
+                        <span title="четверг">Чт</span>
+                    </th>
+                    <th scope="col">
+                        <span title="пятница">Пт</span>
+                    </th>
+                    <th scope="col" class="ui-datepicker-week-end">
+                        <span title="суббота">Сб</span>
+                    </th>
+                    <th scope="col" class="ui-datepicker-week-end">
+                        <span title="воскресенье">Вс</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-days-cell-over  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default ui-state-highlight" href="#">1</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">2</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">3</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">4</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">5</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">6</a>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">7</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">8</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">9</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">10</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">11</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">12</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">13</a>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">14</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">15</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">16</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">17</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">18</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">19</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">20</a>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">21</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">22</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">23</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">24</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">25</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">26</a>
+                    </td>
+                    <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">27</a>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">28</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">29</a>
+                    </td>
+                    <td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020">
+                    <a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+                    </td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+                    </td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </id=>
+        script(src="../form_element/script/mask.js")
+        script(src="../form_element/script/datepicker.js")
+        script(src="../form_element/script/slider.js")
+        script(src="../form_element/script/dropdown.js")
+        script(src="../cards/script/calculation.js")

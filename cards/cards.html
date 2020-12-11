@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="cards.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <title>Form element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="../form_element/script/jquery.maskedinput.js"></script>
+    <script src="../form_element/script/jquery.maskedinput.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+</svg>
+
+    <div class="content">
+      <div class="flex">
+        <div class="column">
+          <div class="findroom-block">
+            <h1>Найдём номера под ваши пожелания</h1>
+            <div class="findroom-block__date flex space-between">
+              <div class="datedropdown-block">
+                <h3>прибытие</h3>
+                <div class="date-dropdown">
+                  <input type="text" id="datepicker" placeholder="ДД.ММ.ГГГГ"/>
+                </div>
+              </div>
+              <div class="datedropdown-block">
+                <h3>выезд</h3>
+                <div class="date-dropdown">
+                  <input type="text" id="datepicker1" placeholder="ДД.ММ.ГГГГ"/>
+                </div>
+              </div>
+            </div>
+            <div class="findroom-block__gest">   
+              <div class="dropdown__title">
+                <h3>Гости</h3>
+              </div>
+              <div class="dropdown">
+                <input class="dropdown__input" type="text" id="calculation" readonly="readonly"/>
+                <p class="val" id="val">Сколько гостей</p><a class="btn-click"><img src="../imag/more.svg" alt=""/></a>
+                <div class="select" id="select">
+                  <div class="select-block flex space-between">
+                    <div class="select-block__text">
+                      <h3>Взрослые</h3>
+                    </div>
+                    <div class="select-block__buttons">
+                      <button class="btn-reduce" type="button" id="btn-reduce4">-</button><span class="result" id="clicks4">0</span>
+                      <button class="btn-large" type="button" id="btn-large4">+</button>
+                    </div>
+                  </div>
+                  <div class="select-block flex space-between">
+                    <div class="select-block__text">
+                      <h3>Дети </h3>
+                    </div>
+                    <div class="select-block__buttons">
+                      <button class="btn-reduce" type="button" id="btn-reduce5">-</button><span class="result" id="clicks5">0</span>
+                      <button class="btn-large" type="button" id="btn-large5">+</button>
+                    </div>
+                  </div>
+                  <div class="select-block flex space-between">
+                    <div class="select-block__text">
+                      <h3>Младенцы </h3>
+                    </div>
+                    <div class="select-block__buttons">
+                      <button class="btn-reduce" type="button" id="btn-reduce6">-</button><span class="result" id="clicks6">0</span>
+                      <button class="btn-large" type="button" id="btn-large6">+</button>
+                    </div>
+                  </div>
+                  <div class="select-button flex space-between">
+                    <button class="btn-cansel2" type="button">Отменить</button>
+                    <button class="btn-apply2" type="button">Применить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-pay" type="submit">Подобрать номер<img class="arrow" src="../imag/arrow_forward.svg" alt=""/></button>
+          </div>
+          <div class="check-block">
+            <h1>Регистрация аккаунта</h1>
+            <input type="text" placeholder="Имя"/>
+            <input type="text" placeholder="Фамилия"/>
+            <div class="radio-block flex">
+              <div class="radio">
+                <input type="radio" id="rb1" name="rb" checked="checked"/>
+                <label for="rd1">Мужчины</label>
+              </div>
+              <div class="radio">
+                <input type="radio" id="rb2" name="rb"/>
+                <label for="rd2">Женщины</label>
+              </div>
+            </div>
+            <h3>Дата рождения</h3>
+            <input type="text" id="date" placeholder="ДД.ММ.ГГГГ"/>
+            <h3>Данные для входа в сервис</h3>
+            <input type="email" placeholder="Email"/>
+            <input type="password" placeholder="Пароль"/>
+            <div class="toggle-block">
+              <div class="toggle">
+                <div class="flex">
+                  <div class="toggle-button-cover">
+                    <div class="button-cover">
+                      <div class="button r" id="button-1">
+                        <input class="checkbox" type="checkbox" name=""/>
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="button-1">Получать спецпредложения</label>
+                </div>
+              </div>
+            </div>
+            <button class="btn-pay" type="submit">Перейти к оплате<img class="arrow" src="../imag/arrow_forward.svg" alt=""/></button>
+            <div class="account-block flex space-between">
+              <p>Уже есть аккаунт на Toxin</p>
+              <button class="btn bth-hov btn-empty" type="submit">Войти</button>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="selectroom-block">
+            <div class="selectroom-block__title flex space-between">
+              <h1>№ 888 <span>люкс</span></h1>
+              <p id="room_rate"> <span>в сутки</span></p>
+            </div>
+            <div class="selectroom-block__date flex space-between">
+              <div class="datedropdown-block">
+                <h3>прибытие</h3>
+                <div class="date-dropdown">
+                  <input type="text" id="datepicker2" placeholder="ДД.ММ.ГГГГ"/>
+                </div>
+              </div>
+              <div class="datedropdown-block">
+                <h3>выезд</h3>
+                <div class="date-dropdown">
+                  <input type="text" id="datepicker3" placeholder="ДД.ММ.ГГГГ"/>
+                </div>
+              </div>
+            </div>
+            <div class="selectroom-block__gest">   
+              <div class="dropdown__title">
+                <h3>Гости</h3>
+              </div>
+              <div class="dropdown">
+                <input class="dropdown__input" type="text" id="calculation" readonly="readonly"/>
+                <p class="val" id="val1">Сколько гостей</p><a class="btn-click2"><img src="../imag/more.svg" alt=""/></a>
+                <div class="select" id="select2">
+                  <div class="select-block flex space-between">
+                    <div class="select-block__text">
+                      <h3>Взрослые</h3>
+                    </div>
+                    <div class="select-block__buttons">
+                      <button class="btn-reduce" type="button" id="btn-reduce1">-</button><span class="result" id="clicks1">0</span>
+                      <button class="btn-large" type="button" id="btn-large1">+</button>
+                    </div>
+                  </div>
+                  <div class="select-block flex space-between">
+                    <div class="select-block__text">
+                      <h3>Дети </h3>
+                    </div>
+                    <div class="select-block__buttons">
+                      <button class="btn-reduce" type="button" id="btn-reduce2">-</button><span class="result" id="clicks2">0</span>
+                      <button class="btn-large" type="button" id="btn-large2">+</button>
+                    </div>
+                  </div>
+                  <div class="select-block flex space-between">
+                    <div class="select-block__text">
+                      <h3>Младенцы </h3>
+                    </div>
+                    <div class="select-block__buttons">
+                      <button class="btn-reduce" type="button" id="btn-reduce3">-</button><span class="result" id="clicks3">0</span>
+                      <button class="btn-large" type="button" id="btn-large3">+</button>
+                    </div>
+                  </div>
+                  <div class="select-button flex space-between">
+                    <button class="btn-cansel" type="button">Отменить</button>
+                    <button class="btn-apply" type="button">Применить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="selectroom-block__cost flex space-between">
+              <p id="total_days"></p>
+              <p id="cost_days"></p>
+            </div>
+            <div class="selectroom-block__service-charge flex space-between">
+              <div class="service-charge_title flex">
+                <p class="title">Сбор за услуги: скидка 2 179₽</p><img src="../imag/info.svg" alt=""/>
+              </div>
+              <p>0₽</p>
+            </div>
+            <div class="selectroom-block__additional flex space-between">
+              <div class="additional_title flex">
+                <p class="title">Сбор за дополнительные  услуги</p><img src="../imag/info.svg" alt=""/>
+              </div>
+              <p id="add"> </p>
+            </div>
+            <div class="selectroom-block__total-price flex space-between">
+              <h1>Итого</h1>
+              <h1 id="total"></h1>
+            </div>
+            <button class="btn-pay" type="submit">Забронировать<img class="arrow" src="../imag/arrow_forward.svg" alt=""/></button>
+          </div>
+          <div class="login-block">
+            <h1>Войти</h1>
+            <input type="email" placeholder="Email"/>
+            <input type="password" placeholder="Пароль"/>
+            <button class="btn-pay" type="submit">Войти<img class="arrow" src="../imag/arrow_forward.svg" alt=""/></button>
+            <div class="account-block flex space-between">
+              <p>Нет аккаунта на Toxin?</p>
+              <button class="btn bth-hov btn-empty" type="submit">Создать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../form_element/script/mask.js"></script>
+    <script src="../form_element/script/datepicker.js"></script>
+    <script src="../form_element/script/slider.js"></script>
+    <script src="../form_element/script/dropdown.js"></script>
+    <script src="../cards/script/calculation.js"></script>
+  </body>
+</html>

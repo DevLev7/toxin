@@ -1,0 +1,551 @@
+/* quicksand-regular - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/quicksand-v21-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/quicksand-v21-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-v21-latin-regular.woff2") format("woff2"), url("../fonts/quicksand-v21-latin-regular.woff") format("woff"), url("../fonts/quicksand-v21-latin-regular.ttf") format("truetype"), url("../fonts/quicksand-v21-latin-regular.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* quicksand-700 - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/quicksand-v21-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/quicksand-v21-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-v21-latin-700.woff2") format("woff2"), url("../fonts/quicksand-v21-latin-700.woff") format("woff"), url("../fonts/quicksand-v21-latin-700.ttf") format("truetype"), url("../fonts/quicksand-v21-latin-700.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v15-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/montserrat-v15-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v15-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v15-latin_cyrillic-regular.woff") format("woff"), url("../fonts/montserrat-v15-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/montserrat-v15-latin_cyrillic-regular.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v15-latin_cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-v15-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v15-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v15-latin_cyrillic-700.woff") format("woff"), url("../fonts/montserrat-v15-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/montserrat-v15-latin_cyrillic-700.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Quicksand";
+  font-size: 24px;
+  line-height: 30px;
+  color: #1F2041;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Quicksand";
+  font-size: 19px;
+  line-height: 23.75px;
+  color: #1F2041;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 14.63px;
+  color: #1F2041;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+body {
+  background-color: #E5E5E5;
+  margin: 0;
+  width: 100%;
+}
+body svg {
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
+body .content {
+  margin: 0px auto 100px;
+  width: 76.3888888889%;
+  height: auto;
+  padding: 143px 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+p {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.column {
+  margin-right: 40px;
+}
+
+input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: 400;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 9px 0 9px 15px;
+}
+input::placeholder {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.25);
+  font-weight: 400;
+}
+input:hover, input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  outline: none;
+}
+input:hover::placeholder, input:focus::placeholder {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: 400;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown input {
+  position: relative;
+}
+.dropdown .val {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 17px;
+}
+.dropdown a {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  cursor: pointer;
+}
+.dropdown .select {
+  display: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  position: relative;
+  z-index: 2;
+  top: -2px;
+  background: #fff;
+  padding: 13px 7px 0px 15px;
+  border-radius: 0 0 5px 5px;
+  height: auto;
+}
+.dropdown .select .select-block {
+  margin-bottom: 22px;
+}
+.dropdown .select .select-block .select-block__text {
+  margin: auto 0;
+}
+.dropdown .select .select-block .select-block__buttons .btn-reduce, .dropdown .select .select-block .select-block__buttons .btn-large {
+  width: 30px;
+  height: 30px;
+  border-radius: 22px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background-color: #fff;
+  cursor: pointer;
+}
+.dropdown .select .select-block .select-block__buttons span {
+  margin: 0 8px 0 12px;
+  font-weight: bold;
+  color: #1F2041;
+}
+.dropdown .select .select-button {
+  margin-bottom: 13px;
+}
+.dropdown .select .select-button button {
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 15px;
+  color: #BC9CFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.date-dropdown {
+  width: 150px;
+  background: url(../imag/vector.svg) no-repeat 95%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.date-dropdown input {
+  width: 150px;
+  border-radius: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  border: 0;
+}
+.date-dropdown input::placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.btn-pay {
+  position: relative;
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  text-transform: uppercase;
+  border-radius: 22px;
+  border: none;
+  width: 300px;
+  height: 44px;
+  cursor: pointer;
+}
+.btn-pay .arrow {
+  position: absolute;
+  right: 15px;
+}
+
+h1 {
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+  font-weight: 700;
+  margin-bottom: 21px;
+}
+
+.toggle {
+  position: relative;
+  top: 11px;
+}
+.toggle label[for=button-1] {
+  position: absolute;
+  z-index: 3;
+  right: 55px;
+  top: -2px;
+}
+.toggle .toggle-button-cover {
+  position: relative;
+}
+.toggle .toggle-button-cover .button-cover::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+}
+.toggle .toggle-button-cover .button-cover .button {
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+.toggle .toggle-button-cover .button-cover .button .checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle .toggle-button-cover .button-cover .button .knobs {
+  z-index: 2;
+}
+.toggle .toggle-button-cover .button-cover .button .layer {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+.toggle .toggle-button-cover .button-cover, .toggle .toggle-button-cover .knobs, .toggle .toggle-button-cover .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.toggle .toggle-button-cover .button.r, .toggle .toggle-button-cover .button.r .layer {
+  border-radius: 100px;
+}
+.toggle .toggle-button-cover #button-1 .knobs:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  background-color: rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+.toggle .toggle-button-cover #button-1 .checkbox:checked + .knobs:before {
+  content: "";
+  left: 26px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.toggle .toggle-button-cover #button-1 .checkbox:checked ~ .layer {
+  background-color: #fff;
+  border: 1px solid #BC9CFF;
+}
+.toggle .toggle-button-cover #button-1 .knobs, .toggle .toggle-button-cover #button-1 .knobs:before, .toggle .toggle-button-cover #button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+input[type=radio]:checked,
+input[type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio]:checked + label,
+input[type=radio]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type=radio]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #BC9CFF;
+}
+
+input[type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dddddd;
+  background-color: #fff;
+}
+
+input[type=radio]:checked + label:before,
+input[type=radio]:not(:checked) + label:before {
+  border-radius: 100%;
+}
+
+input[type=radio]:checked + label:after,
+input[type=radio]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+input[type=radio]:checked + label:after,
+input[type=radio]:not(:checked) + label:after {
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+input[type=radio]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type=radio]:checked + label:after {
+  opacity: 1;
+}
+
+.btn {
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 15px;
+  color: #BC9CFF;
+  font-weight: 700;
+  padding: 14px 21px 15px 19px;
+  text-transform: uppercase;
+  border-radius: 22px;
+  border: 3px solid #BC9CFF;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+
+.btn-fill {
+  color: #fff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  margin-bottom: 30px;
+}
+
+.btn-empty {
+  color: #BC9CFF;
+  background: transparent;
+}
+
+.findroom-block {
+  width: 380px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px 30px 30px;
+}
+.findroom-block .findroom-block__date {
+  margin-bottom: 20px;
+}
+.findroom-block .findroom-block__gest {
+  margin-bottom: 31px;
+}
+
+.check-block {
+  margin-top: 40px;
+  width: 380px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px 30px 30px;
+}
+.check-block input {
+  margin-bottom: 10px;
+}
+.check-block .radio {
+  margin-right: 20px;
+}
+.check-block h3 {
+  margin-top: 20px;
+}
+.check-block .toggle-block {
+  position: relative;
+  height: 35px;
+}
+.check-block .btn-pay {
+  margin: 20px 0 30px 0;
+}
+.check-block p {
+  margin: auto 0;
+  color: #000;
+}
+
+.login-block {
+  width: 380px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px 30px 30px;
+}
+.login-block input {
+  margin-bottom: 10px;
+}
+.login-block .btn-pay {
+  margin: 10px 0 30px;
+}
+.login-block p {
+  margin: auto 0;
+  color: #000;
+}
+
+.selectroom-block {
+  margin-bottom: 40px;
+  width: 380px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px 30px 30px;
+}
+.selectroom-block .selectroom-block__date {
+  margin-bottom: 20px;
+}
+.selectroom-block .selectroom-block__gest {
+  margin-bottom: 20px;
+}
+.selectroom-block .selectroom-block__cost,
+.selectroom-block .selectroom-block__service-charge {
+  margin-bottom: 10px;
+}
+.selectroom-block .selectroom-block__additional {
+  margin-bottom: 30px;
+}
+.selectroom-block .title {
+  width: 214px;
+}
+.selectroom-block .selectroom-block__total-price #total {
+  position: relative;
+}
+.selectroom-block .selectroom-block__total-price #total::before {
+  content: "";
+  border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+  width: 160px;
+  position: absolute;
+  top: 23px;
+  right: 84px;
+}
